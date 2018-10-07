@@ -48,13 +48,14 @@ var myArrayCopy = myArray;
 //DON'T TOUCH THE CODE BELOW
 var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
-function evensOnly(arr) {
+function evensOnly() {
   var evensArray = [];
-  for (var i = 0; i < arr.length; i++){
-      if (i % 2 === 0){
-        return evensArray[i];
-      }
+  for (var i = 0; i < myNumbers.length; i++){
+    if (myNumbers[i] % 2 === 0){
+      evensArray.push(myNumbers[i]);
+    }
   }
+  return evensArray;
 }
 
 // #9 Using filter(), return only your friends of the array of people below. Assign it to a variable called 'trueFriends'.
@@ -68,6 +69,18 @@ var peopleIknow = [
   { name: "Holly", friend: true }
 ];
 
+var trueFriends = peopleIknow.filter(kolega => kolega.friend === true)
+
 // #10 Create a function called indexFinder that will loop over an array and return a new array of the indexes of the contents e.g. [243, 123, 4, 12] would return [0,1,2,3]. 
 // Create a new variable called 'indexes' and set it to contain the indexes of randomNumbers.
+
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+
+  var indexes = indexFinder();
+  function indexFinder(){
+  var ind = [];
+  for (var i = 0; i < randomNumbers.length; i++){
+    ind.push(i);
+  }
+  return ind;
+};
